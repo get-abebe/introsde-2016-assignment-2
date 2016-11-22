@@ -1,0 +1,519 @@
+*********Step 3.1*********
+Request #1: GET http://localhost:5500/sdelab/person Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people>
+    <person>
+        <idPerson>51</idPerson>
+        <name>Changed</name>
+        <lastname>peter</lastname>
+        <birthdate>1988-06-08 02:00:00</birthdate>
+        <username>changed123</username>
+        <email>bob.peter@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>401</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>85</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>555</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>180</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>52</idPerson>
+        <name>Jack</name>
+        <lastname>Wilshire</lastname>
+        <birthdate>1986-06-08 02:00:00</birthdate>
+        <username>jack123</username>
+        <email>jack.wilshire@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>402</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>90</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>556</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>190</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>53</idPerson>
+        <name>getachew</name>
+        <lastname>abebe</lastname>
+        <birthdate>1984-06-08 02:00:00</birthdate>
+        <username>abebe123</username>
+        <email>abeebe.getachew@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>403</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>70</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>557</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>168</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>54</idPerson>
+        <name>steve</name>
+        <lastname>alice</lastname>
+        <birthdate>1982-06-08 02:00:00</birthdate>
+        <username>alice123</username>
+        <email>alice.steve@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>404</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>84</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>558</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>195</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>55</idPerson>
+        <name>Pallino</name>
+        <lastname>gboo</lastname>
+        <birthdate>1981-06-08 02:00:00</birthdate>
+        <username>gboo123</username>
+        <email>pinco.gboo@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>405</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>90</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>559</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>3</idMeasureDef>
+                    <measureName>steps</measureName>
+                    <measureType>integer</measureType>
+                </measureDefinition>
+                <value>170</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+</people>
+
+
+Request #1: GET http://localhost:5500/sdelab/person Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+[introsde.rest.ehealth.model.Person@65b104b9, introsde.rest.ehealth.model.Person@6c4980d3, introsde.rest.ehealth.model.Person@327bcebd, introsde.rest.ehealth.model.Person@19c65cdc, introsde.rest.ehealth.model.Person@74bf1791]
+
+*********Step 3.2*********
+Request #2: GET http://localhost:5500/sdelab/person/51 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <idPerson>51</idPerson>
+    <name>Changed</name>
+    <lastname>peter</lastname>
+    <birthdate>1988-06-08 02:00:00</birthdate>
+    <username>changed123</username>
+    <email>bob.peter@gmail.com</email>
+    <healthprofile/>
+    <Measurements>
+        <lifeStatus>
+            <idMeasure>401</idMeasure>
+            <measureDefinition>
+                <idMeasureDef>1</idMeasureDef>
+                <measureName>weight</measureName>
+                <measureType>double</measureType>
+            </measureDefinition>
+            <value>85</value>
+        </lifeStatus>
+        <lifeStatus>
+            <idMeasure>555</idMeasure>
+            <measureDefinition>
+                <idMeasureDef>2</idMeasureDef>
+                <measureName>height</measureName>
+                <measureType>double</measureType>
+            </measureDefinition>
+            <value>180</value>
+        </lifeStatus>
+    </Measurements>
+</person>
+
+
+Request #2: GET http://localhost:5500/sdelab/person/51 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+introsde.rest.ehealth.model.Person@31ff43be
+
+*********Step 3.3*********
+Request #3: PUT http://localhost:5500/sdelab/person/51 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <idPerson>51</idPerson>
+    <name>Changed</name>
+    <lastname>peter</lastname>
+    <birthdate>1988-06-08 02:00:00</birthdate>
+    <username>changed123</username>
+    <email>bob.peter@gmail.com</email>
+    <healthprofile/>
+    <Measurements>
+        <lifeStatus>
+            <idMeasure>401</idMeasure>
+            <measureDefinition>
+                <idMeasureDef>1</idMeasureDef>
+                <measureName>weight</measureName>
+                <measureType>double</measureType>
+            </measureDefinition>
+            <value>85</value>
+        </lifeStatus>
+        <lifeStatus>
+            <idMeasure>555</idMeasure>
+            <measureDefinition>
+                <idMeasureDef>2</idMeasureDef>
+                <measureName>height</measureName>
+                <measureType>double</measureType>
+            </measureDefinition>
+            <value>180</value>
+        </lifeStatus>
+    </Measurements>
+</person>
+
+
+Request #3: PUT http://localhost:5500/sdelab/person/51 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+introsde.rest.ehealth.model.Person@512baff6
+
+*********Step 3.4*********
+Request #4: POST http://localhost:5500/sdelab/person Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<person>
+    <idPerson>2653</idPerson>
+    <name>david</name>
+    <lastname>lukas</lastname>
+    <birthdate>1980-01-01</birthdate>
+    <username>hilucy</username>
+    <email>lucy@gmail.com</email>
+    <healthprofile/>
+</person>
+
+
+Request #4: POST http://localhost:5500/sdelab/person Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+introsde.rest.ehealth.model.Person@c9d0d6
+
+*********Step 3.5*********
+Request #5: DELETE http://localhost:5500/sdelab/person/2654 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+Request #1: GET http://localhost:5500/sdelab/person/2654 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 404
+Get: Person with id 2654 not found
+
+Request #5: DELETE http://localhost:5500/sdelab/person/2654 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 404
+Request #1: GET http://localhost:5500/sdelab/person/2654 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 404
+Get: Person with id 2654 not found
+
+*********Step 3.6*********
+Request #9: GET http://localhost:5500/sdelab/measureTypes Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<measureTypes>
+    <measureType>weight</measureType>
+    <measureType>height</measureType>
+    <measureType>steps</measureType>
+    <measureType>bloodpressure</measureType>
+    <measureType>heartrate</measureType>
+</measureTypes>
+
+
+Request #9: GET http://localhost:5500/sdelab/measureTypes Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+introsde.rest.ehealth.xml.MeasureTypeXML@30e868be
+
+*********Step 3.7*********
+Request #6: GET http://localhost:5500/sdelab/person/51/weight Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+[introsde.rest.ehealth.model.HealthMeasureHistory@22f31dec, introsde.rest.ehealth.model.HealthMeasureHistory@34c01041, introsde.rest.ehealth.model.HealthMeasureHistory@76f4b65]
+
+Request #6: GET http://localhost:5500/sdelab/person/51/height Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/steps Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/bloodpressure Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/heartrate Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/weight Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/height Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/steps Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/bloodpressure Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/heartrate Accept: application/xml Content-Type: [application/xml]
+=> Result: ERROR
+=> HTTP Status: 200
+
+
+Request #6: GET http://localhost:5500/sdelab/person/51/weight Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+[introsde.rest.ehealth.model.HealthMeasureHistory@3d3e5463, introsde.rest.ehealth.model.HealthMeasureHistory@64a40280, introsde.rest.ehealth.model.HealthMeasureHistory@4b40f651]
+
+Request #6: GET http://localhost:5500/sdelab/person/51/height Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/steps Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/bloodpressure Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/51/heartrate Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/weight Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/height Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/steps Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/bloodpressure Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+Request #6: GET http://localhost:5500/sdelab/person/55/heartrate Accept: application/json Content-Type: [application/json]
+=> Result: ERROR
+=> HTTP Status: 200
+
+
+*********Step 3.8*********
+Request #7: GET http://localhost:5500/sdelab/person/51/weight/1 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+90
+
+Request #7: GET http://localhost:5500/sdelab/person/51/weight/1 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+90
+
+*********Step 3.11*********
+Request #11: GET http://localhost:5500/sdelab/person/51/weight?before=2014-12-09&after=2007-12-09 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+javax.xml.bind.JAXBException: class java.util.ArrayList nor any of its super class is known to this context.
+[introsde.rest.ehealth.model.HealthMeasureHistory@539d019, introsde.rest.ehealth.model.HealthMeasureHistory@39a2bb97]
+
+Request #11: GET http://localhost:5500/sdelab/person/51/weight?before=2014-12-09&after=2007-12-09 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+[introsde.rest.ehealth.model.HealthMeasureHistory@3ad2e17, introsde.rest.ehealth.model.HealthMeasureHistory@8c3619e]
+
+*********Step 3.12*********
+Request #12: GET http://localhost:5500/sdelab/person?measureType=weight&max=101&min=80 Accept: application/xml Content-Type: [application/xml]
+=> Result: OK
+=> HTTP Status: 200
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people>
+    <person>
+        <idPerson>51</idPerson>
+        <name>Changed</name>
+        <lastname>peter</lastname>
+        <birthdate>1988-06-08 02:00:00</birthdate>
+        <username>changed123</username>
+        <email>bob.peter@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>401</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>85</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>555</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>180</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>52</idPerson>
+        <name>Jack</name>
+        <lastname>Wilshire</lastname>
+        <birthdate>1986-06-08 02:00:00</birthdate>
+        <username>jack123</username>
+        <email>jack.wilshire@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>402</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>90</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>556</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>190</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>54</idPerson>
+        <name>steve</name>
+        <lastname>alice</lastname>
+        <birthdate>1982-06-08 02:00:00</birthdate>
+        <username>alice123</username>
+        <email>alice.steve@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>404</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>84</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>558</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>2</idMeasureDef>
+                    <measureName>height</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>195</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+    <person>
+        <idPerson>55</idPerson>
+        <name>Pallino</name>
+        <lastname>gboo</lastname>
+        <birthdate>1981-06-08 02:00:00</birthdate>
+        <username>gboo123</username>
+        <email>pinco.gboo@gmail.com</email>
+        <healthprofile/>
+        <Measurements>
+            <lifeStatus>
+                <idMeasure>405</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>1</idMeasureDef>
+                    <measureName>weight</measureName>
+                    <measureType>double</measureType>
+                </measureDefinition>
+                <value>90</value>
+            </lifeStatus>
+            <lifeStatus>
+                <idMeasure>559</idMeasure>
+                <measureDefinition>
+                    <idMeasureDef>3</idMeasureDef>
+                    <measureName>steps</measureName>
+                    <measureType>integer</measureType>
+                </measureDefinition>
+                <value>170</value>
+            </lifeStatus>
+        </Measurements>
+    </person>
+</people>
+
+
+Request #12: GET http://localhost:5500/sdelab/person?measureType=weight&max=101&min=80 Accept: application/json Content-Type: [application/json]
+=> Result: OK
+=> HTTP Status: 200
+[{"idPerson":51,"name":"Changed","lastname":"peter","birthdate":"1988-06-08 02:00:00","username":"changed123","email":"bob.peter@gmail.com","lifeStatus":[{"idMeasure":401,"value":"85","measureDefinition":{"idMeasureDef":1,"measureName":"weight","measureType":"double","measureDefaultRange":[]},"person":null},{"idMeasure":555,"value":"180","measureDefinition":{"idMeasureDef":2,"measureName":"height","measureType":"double","measureDefaultRange":[]},"person":null}],"healthprofile":{"weight":null,"height":null,"steps":null,"blood_pressure":null,"heart_rate":null}},{"idPerson":52,"name":"Jack","lastname":"Wilshire","birthdate":"1986-06-08 02:00:00","username":"jack123","email":"jack.wilshire@gmail.com","lifeStatus":[{"idMeasure":402,"value":"90","measureDefinition":{"idMeasureDef":1,"measureName":"weight","measureType":"double","measureDefaultRange":[]},"person":null},{"idMeasure":556,"value":"190","measureDefinition":{"idMeasureDef":2,"measureName":"height","measureType":"double","measureDefaultRange":[]},"person":null}],"healthprofile":{"weight":null,"height":null,"steps":null,"blood_pressure":null,"heart_rate":null}},{"idPerson":54,"name":"steve","lastname":"alice","birthdate":"1982-06-08 02:00:00","username":"alice123","email":"alice.steve@gmail.com","lifeStatus":[{"idMeasure":404,"value":"84","measureDefinition":{"idMeasureDef":1,"measureName":"weight","measureType":"double","measureDefaultRange":[]},"person":null},{"idMeasure":558,"value":"195","measureDefinition":{"idMeasureDef":2,"measureName":"height","measureType":"double","measureDefaultRange":[]},"person":null}],"healthprofile":{"weight":null,"height":null,"steps":null,"blood_pressure":null,"heart_rate":null}},{"idPerson":55,"name":"Pallino","lastname":"gboo","birthdate":"1981-06-08 02:00:00","username":"gboo123","email":"pinco.gboo@gmail.com","lifeStatus":[{"idMeasure":405,"value":"90","measureDefinition":{"idMeasureDef":1,"measureName":"weight","measureType":"double","measureDefaultRange":[]},"person":null},{"idMeasure":559,"value":"170","measureDefinition":{"idMeasureDef":3,"measureName":"steps","measureType":"integer","measureDefaultRange":[]},"person":null}],"healthprofile":{"weight":null,"height":null,"steps":null,"blood_pressure":null,"heart_rate":null}}]
